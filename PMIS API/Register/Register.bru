@@ -1,0 +1,31 @@
+meta {
+  name: Register
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/user/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "token": "31bb425084f1a7732b33aebe608dd5af156275ed60d76c791fa5d259a279c63a",
+    "email": "manao@mail.com",
+    "password": "1234",
+    "confirmPassword": "1234",
+    "address": "88/8",
+    "company": "manaosoftware",
+    "fullName": "string",
+    "mobilePhone": "string",
+    "personType": "Person",
+    "phone": "string",
+    "provinceId": 0,
+    "stageProvince": "string",
+    "subDistrictId": 0,
+    "tax": "string",
+    "zipCode": "string"
+  }
+}

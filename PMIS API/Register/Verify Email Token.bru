@@ -1,0 +1,17 @@
+meta {
+  name: Verify Email Token
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{PMIS_URL}}/v1/verify/email
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "token":"4432dd2f4c4f6d573cd3ece0a14f23a7f9cd83ebcbb43ea1f491f1d76a04a26d"
+  }
+}

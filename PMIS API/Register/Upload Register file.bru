@@ -1,0 +1,11 @@
+meta {
+  name: Upload Register file
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{PMIS_URL}}/v1/upload/register
+  body: multipartForm
+  auth: none
+}

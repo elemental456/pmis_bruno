@@ -1,0 +1,17 @@
+meta {
+  name: Send Verify Email
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PMIS_URL}}/v1/verify/send_email
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email":"manao@mail.com"
+  }
+}
