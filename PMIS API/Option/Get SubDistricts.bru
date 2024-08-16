@@ -1,0 +1,15 @@
+meta {
+  name: Get SubDistricts
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/subdistricts?district_id=5001
+  body: none
+  auth: none
+}
+
+query {
+  district_id: 5001
+}
