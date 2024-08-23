@@ -1,32 +1,34 @@
 meta {
-  name: Register
+  name: Add New Agent
   type: http
-  seq: 3
+  seq: 1
 }
 
 post {
-  url: {{PMIS_URL}}/v1/user/register
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies
   body: json
-  auth: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
 }
 
 body:json {
   {
-    "token": "2fff415ced3a774dc8198c6421e8a9a3659f527652c51306a3184cf7c6eca889",
-    "email": "ohm.jinna@gmail.com",
-    "password": "1234",
-    "confirmPassword": "1234",
+    "email": "mail5@mail.com",
     "address": "88/8",
     "company": "manaosoftware",
-    "fullName": "string",
-    "mobilePhone": "string",
-    "personType": "Person",
-    "phone": "string",
-    "provinceId": 0,
+    "fullName": "Test user",
+    "mobilePhone": "0871907698",
+    "personType": "Person", //Corporate
+    "phone": "083418145", //
+    "provinceId": 38,
     "stageProvince": "string",
-    "subDistrictId": 0,
-    "tax": "string",
-    "zipCode": "string",
+    "districtId": 5001,
+    "subDistrictId": 500107,
+    "tax": "1509900489881",
+    "zipCode": "50200",
     "uploadFiles": [
       {
         "filePath": "uploads/register/cb4c2a5e-ccd3-4137-b5b2-3076eb2c1dd8.xml",
