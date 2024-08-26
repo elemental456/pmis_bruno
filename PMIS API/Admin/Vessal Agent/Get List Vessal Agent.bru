@@ -1,0 +1,27 @@
+meta {
+  name: Get List Vessal Agent
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "page": 1,
+    "limit": 2,
+    "search": "",
+    "status": "",
+    "personType": "",
+    "begin": "2024-01-25T19:10:00Z",
+    "end": "2024-03-25T19:10:00Z"
+  }
+}

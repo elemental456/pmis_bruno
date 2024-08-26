@@ -1,11 +1,11 @@
 meta {
-  name: Add New Agent
+  name: Update Vessal Agent By ID
   type: http
-  seq: 3
+  seq: 5
 }
 
-post {
-  url: {{PMIS_URL}}/v1/admin/vessel-agencies
+put {
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies/21
   body: json
   auth: bearer
 }
@@ -16,18 +16,18 @@ auth:bearer {
 
 body:json {
   {
-    "email": "mail5@mail.com",
+    "email": "mail2@mail.com",
     "address": "88/8",
     "company": "manaosoftware",
     "fullName": "Test user",
-    "mobilePhone": "0871907698",
+    "mobilePhone": "543534234",
     "personType": "Person", //Corporate
-    "phone": "083418145", //
-    "provinceId": 38,
+    "phone": "1111111", //
+    "provinceId": 1,
     "stageProvince": "string",
     "districtId": 5001,
     "subDistrictId": 500107,
-    "tax": "1509900489881",
+    "tax": "13324124512343",
     "zipCode": "50200",
     "uploadFiles": [
       {
