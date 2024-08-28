@@ -5,23 +5,21 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/vessel-agencies
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies?page=2&limit=2&search&status&personType&begin=2024-01-25T19:10:00Z&end=2024-12-25T19:10:00Z
   body: json
   auth: bearer
 }
 
-auth:bearer {
-  token: {{PMIS_TOKEN}}
+params:query {
+  page: 2
+  limit: 2
+  search: 
+  status: 
+  personType: 
+  begin: 2024-01-25T19:10:00Z
+  end: 2024-12-25T19:10:00Z
 }
 
-body:json {
-  {
-    "page": 1,
-    "limit": 2,
-    "search": "",
-    "status": "",
-    "personType": "",
-    "begin": "2024-01-25T19:10:00Z",
-    "end": "2024-03-25T19:10:00Z"
-  }
+auth:bearer {
+  token: {{PMIS_TOKEN}}
 }
