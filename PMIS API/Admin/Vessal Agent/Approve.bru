@@ -5,7 +5,11 @@ meta {
 }
 
 put {
-  url: {{PMIS_URL}}/v1/admin/vessel-agencies/21/approve
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies/25/approve
   body: none
-  auth: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
 }

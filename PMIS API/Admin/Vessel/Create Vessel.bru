@@ -1,0 +1,50 @@
+meta {
+  name: Create Vessel
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/vessel/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "name": "เรือเทส1",
+    "callSign": "เจ้าเทส 1",
+    "imoNumber": "1234",
+    "owner": "มานี",
+    "breadthExtreme": 1450,
+    "depth": 500,
+    "grossTonnage": 1230,
+    "lengthOverall": 2000,
+    "loadWeight": 1230,
+    "mainEngine": "โยโยต้า เครื่อง 2000",
+    "bandAndModel": "เบ็นซ์",
+    "mmsiNumber": "mmsi123",
+    "netTonnage": 190,
+    "officialNumber": "111111",
+    "vesselFlagId": 1,
+    "vesselTypeId": 1,
+    "uploadFiles": [
+      {
+        "filePath": "uploads/register/cb4c2a5e-ccd3-4137-b5b2-3076eb2c1dd8.xml",
+        "fileName": "ex.xml",
+        "extension": "application/xml",
+        "size": 12964
+      },
+      {
+        "filePath": "uploads/register/cb4c2a5e-ccd3-4137-b5b2-3076eb2c1dd8.xml",
+        "fileName": "ex2.xml",
+        "extension": "application/xml",
+        "size": 12964
+      }
+    ]
+  }
+}
