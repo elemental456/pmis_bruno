@@ -1,12 +1,12 @@
 meta {
-  name: Update Vessel
+  name: Upload Vessel
   type: http
-  seq: 4
+  seq: 6
 }
 
-put {
-  url: {{PMIS_URL}}/v1/admin/vessels/3
-  body: json
+post {
+  url: {{PMIS_URL}}/v1/admin/vessels/upload
+  body: multipartForm
   auth: bearer
 }
 
@@ -16,20 +16,20 @@ auth:bearer {
 
 body:json {
   {
-    "name": "เรือเทส1133",
-    "callSign": "เจ้าเทส 111",
+    "name": "เรือเทส1",
+    "callSign": "เจ้าเทส 1",
     "imoNumber": "1234",
     "owner": "มานี",
     "breadthExtreme": 1450,
     "depth": 500,
-    "grossTonnage": 1230,
+    "grossTonnage": 1237,
     "lengthOverall": 2000,
     "loadWeight": 1230,
     "mainEngine": "โยโยต้า เครื่อง 2000",
     "bandAndModel": "เบ็นซ์",
     "mmsiNumber": "mmsi123",
     "netTonnage": 190,
-    "officialNumber": "1111121",
+    "officialNumber": "1239",
     "vesselFlagId": 1,
     "vesselTypeId": 1,
     "uploadFiles": [
@@ -47,4 +47,8 @@ body:json {
       }
     ]
   }
+}
+
+body:multipart-form {
+  file: @file(/Users/mtb730942/Downloads/457426469_822172460118898_7511630743102052809_n.jpg)
 }

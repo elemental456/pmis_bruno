@@ -1,17 +1,17 @@
 meta {
-  name: Get Vessel Owners
+  name: Get Vessel List
   type: http
-  seq: 4
+  seq: 6
 }
 
 get {
-  url: {{PMIS_URL}}/v1/options/vessel-owners?q
+  url: {{PMIS_URL}}/v1/options/vessel?q=1
   body: none
   auth: bearer
 }
 
 params:query {
-  q: 
+  q: 1
 }
 
 auth:bearer {

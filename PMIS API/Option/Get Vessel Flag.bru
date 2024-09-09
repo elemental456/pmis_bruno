@@ -1,0 +1,15 @@
+meta {
+  name: Get Vessel Flag
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/vessel-flags
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

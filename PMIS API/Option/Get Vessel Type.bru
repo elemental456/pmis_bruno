@@ -1,12 +1,12 @@
 meta {
-  name: Delete Vessel By ID
+  name: Get Vessel Type
   type: http
   seq: 5
 }
 
-delete {
-  url: {{PMIS_URL}}/v1/admin/vessels/3
-  body: json
+get {
+  url: {{PMIS_URL}}/v1/options/vessel-types
+  body: none
   auth: bearer
 }
 
