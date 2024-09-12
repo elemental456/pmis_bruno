@@ -1,0 +1,21 @@
+meta {
+  name: Get Roles List
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/roles?page=1&limit=10
+  body: json
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 10
+  ~search: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

@@ -1,0 +1,57 @@
+meta {
+  name: Create Role
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/roles/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name": "role-all",
+      "permissions": [
+        "view_dashboard_document",
+        "create_document",
+        "view_document",
+        "edit_document",
+        "delete_document",
+        "verify_document",
+        "approve_document",
+        "view_dashboard_sailing",
+        "create_sailing",
+        "view_sailing",
+        "edit_sailing",
+        "delete_sailing",
+        "verify_sailing",
+        "approve_sailing",
+        "view_dashboard_ship_in_out",
+        "create_ship_in_out_import",
+        "view_ship_in_out_import",
+        "edit_ship_in_out_import",
+        "delete_ship_in_out_import",
+        "create_ship_in_out_verify",
+        "view_ship_in_out_verify",
+        "edit_ship_in_out_verify",
+        "delete_ship_in_out_verify",
+        "view_dashboard_account",
+        "create_account",
+        "view_account",
+        "edit_account",
+        "delete_account",
+        "verify_account",
+        "approve_account",
+        "create_vessel_data",
+        "view_vessel_data",
+        "edit_vessel_data",
+        "delete_vessel_data"
+      ]
+    }
+}
