@@ -1,0 +1,21 @@
+meta {
+  name: Update Role Status
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/roles/3/status
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "enabled": false
+  }
+}
