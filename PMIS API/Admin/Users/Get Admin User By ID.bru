@@ -1,0 +1,15 @@
+meta {
+  name: Get Admin User By ID
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies/25
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
