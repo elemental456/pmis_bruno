@@ -1,11 +1,11 @@
 meta {
-  name: Update Admin User
+  name: Create Admin User
   type: http
-  seq: 3
+  seq: 2
 }
 
-put {
-  url: {{PMIS_URL}}/v1/admin/users/29
+post {
+  url: {{PMIS_URL}}/v1/admin/users
   body: json
   auth: bearer
 }
@@ -16,18 +16,18 @@ auth:bearer {
 
 body:json {
   {
-    "email": "John@mail.com",
+    "email": "tadmin@t.com",
     "address": "88/8",
     "company": "manaosoftware",
-    "fullName": "mail2 user",
-    "mobilePhone": "543534234",
+    "fullName": "Test user",
+    "mobilePhone": "0871907698",
     "personType": "Person", //Corporate
-    "phone": "1111111", //
-    "provinceId": 1,
+    "phone": "083418145", //
+    "provinceId": 38,
     "stageProvince": "string",
     "districtId": 5001,
     "subDistrictId": 500107,
-    "tax": "13324124512343",
+    "tax": "1509900489881",
     "zipCode": "50200",
     "roleId": 3,
     "uploadFiles": [

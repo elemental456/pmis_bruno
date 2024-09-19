@@ -1,0 +1,21 @@
+meta {
+  name: Update User Role
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/users/29/role
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "roleId": 4
+  }
+}

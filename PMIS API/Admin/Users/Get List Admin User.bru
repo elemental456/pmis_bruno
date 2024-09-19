@@ -1,11 +1,11 @@
 meta {
   name: Get List Admin User
   type: http
-  seq: 3
+  seq: 1
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/users?page=1&limit=12&search&status&personType&begin=2024-01-25T19:10:00Z&end=2024-12-25T19:10:00Z
+  url: {{PMIS_URL}}/v1/admin/users?page=1&limit=12&search&status&roleId
   body: json
   auth: bearer
 }
@@ -15,9 +15,7 @@ params:query {
   limit: 12
   search: 
   status: 
-  personType: 
-  begin: 2024-01-25T19:10:00Z
-  end: 2024-12-25T19:10:00Z
+  roleId: 
 }
 
 auth:bearer {
