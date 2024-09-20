@@ -5,11 +5,17 @@ meta {
 }
 
 delete {
-  url: {{PMIS_URL}}/v1/admin/roles/5
-  body: none
+  url: {{PMIS_URL}}/v1/admin/roles/7
+  body: json
   auth: bearer
 }
 
 auth:bearer {
   token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "newRoleId": 4
+  }
 }

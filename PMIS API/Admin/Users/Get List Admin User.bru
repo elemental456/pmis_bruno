@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/users?page=1&limit=12&search&status&roleId
+  url: {{PMIS_URL}}/v1/admin/users?page=1&limit=12&search&roleId&enabled=false
   body: json
   auth: bearer
 }
@@ -14,8 +14,8 @@ params:query {
   page: 1
   limit: 12
   search: 
-  status: 
   roleId: 
+  enabled: false
 }
 
 auth:bearer {
