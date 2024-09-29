@@ -1,0 +1,59 @@
+meta {
+  name: Create Draft
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/documents
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "vesselFlagId": 1,
+    "vesselTypeId": 2,
+    "vesselId": 12,
+    "vesselOwner": "John Doe2",
+    "vesselName": "Ocean Explorer",
+    "vesselImoNumber": "IMO1234567",
+    "vesselMMSiNumber": "MMSI7654321",
+    "vesselDSVNumber": "DSV1234",
+    "vesselOfficialNumber": "VN123456",
+    "vesselCallSign": "CALL123",
+    "vesselNationality": "USA",
+    "vesselCountry": "USA",
+    "vesselLoadWeight": 20000.5,
+    "vesselGrossTonnage": 15000.75,
+    "vesselNetTonnage": 8000.25,
+    "vesselLengthOverall": 250.0,
+    "vesselBreadthExtreme": 32.5,
+    "vesselDepth": 20.0,
+    "vesselMainEngine": "Diesel Engine",
+    "vesselBandAndModel": "Engine Brand Model XYZ",
+    "vesselLicenseExpiredDate": "2025-12-31T00:00:00Z",
+    "vesselUploadFiles": [
+      {
+        "id": 1,
+        "filePath": "/uploads/documents/vessel1.pdf",
+        "fileName": "vessel1",
+        "extension": "pdf",
+        "size": 204800,
+        "preview": "/uploads/previews/vessel1_preview.png"
+      },
+      {
+        "id": 2,
+        "filePath": "/uploads/documents/vessel2.docx",
+        "fileName": "vessel2",
+        "extension": "docx",
+        "size": 102400,
+        "preview": "/uploads/previews/vessel2_preview.png"
+      }
+    ]
+  }
+}
