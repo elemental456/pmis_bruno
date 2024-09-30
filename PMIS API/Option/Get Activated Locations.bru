@@ -1,0 +1,15 @@
+meta {
+  name: Get Activated Locations
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/locations
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
