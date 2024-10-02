@@ -1,0 +1,31 @@
+meta {
+  name: Update Berths
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/berths/:docBerthId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  docBerthId: 1
+  docId: 10
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "berthId": 1 ,
+    "purposeTypeId": 1 ,
+    "locateId": 1 ,
+    "eta": 1 ,
+    "etd": 1 ,
+    "description": ""
+  }
+}

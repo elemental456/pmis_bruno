@@ -1,0 +1,20 @@
+meta {
+  name: Get Berths
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/berth
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~begin: 2024-01-25T19:10:00Z
+  ~end: 2024-12-25T19:10:00Z
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

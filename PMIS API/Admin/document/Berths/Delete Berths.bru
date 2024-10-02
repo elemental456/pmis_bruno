@@ -1,0 +1,20 @@
+meta {
+  name: Delete Berths
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/berths/:docBerthId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  docBerthId: 1
+  docId: 10
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
