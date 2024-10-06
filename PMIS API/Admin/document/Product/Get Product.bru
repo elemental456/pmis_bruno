@@ -1,0 +1,32 @@
+meta {
+  name: Get Product
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/berths/:docBerthId/products/:productId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  productId: 10
+  docBerthId: 7
+  docId: 31
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "productTypeId": 1,
+    "productSubTypeId": 1,
+    "mTonQty": 100.5,
+    "rTonQty": 50.25,
+    "packageAmount": 10,
+    "receiver": "John Doe"
+  }
+}

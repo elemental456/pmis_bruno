@@ -1,13 +1,22 @@
 meta {
-  name: Create Draft
+  name: Get Document List
   type: http
-  seq: 1
+  seq: 3
 }
 
-post {
-  url: {{PMIS_URL}}/v1/admin/documents
+get {
+  url: {{PMIS_URL}}/v1/admin/documents/?page=1&limit=12&search&type&flag&showAll=true
   body: json
   auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 12
+  search: 
+  type: 
+  flag: 
+  showAll: true
 }
 
 auth:bearer {

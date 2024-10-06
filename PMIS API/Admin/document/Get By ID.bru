@@ -1,13 +1,17 @@
 meta {
-  name: Create Draft
+  name: Get By ID
   type: http
-  seq: 1
+  seq: 5
 }
 
-post {
-  url: {{PMIS_URL}}/v1/admin/documents
+get {
+  url: {{PMIS_URL}}/v1/admin/documents/:id
   body: json
   auth: bearer
+}
+
+params:path {
+  id: 8
 }
 
 auth:bearer {
