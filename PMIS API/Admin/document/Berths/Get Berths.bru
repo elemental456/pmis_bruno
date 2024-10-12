@@ -5,13 +5,14 @@ meta {
 }
 
 post {
-  url: {{PMIS_URL}}/v1/admin/documents/:docId/berths
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/berths/:docBerthId
   body: json
   auth: bearer
 }
 
 params:path {
-  docId: 10
+  docBerthId: 9
+  docId: 13
 }
 
 auth:bearer {
