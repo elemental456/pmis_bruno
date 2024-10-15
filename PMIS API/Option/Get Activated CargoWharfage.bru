@@ -1,0 +1,15 @@
+meta {
+  name: Get Activated CargoWharfage
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/cargo-wharfage
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
