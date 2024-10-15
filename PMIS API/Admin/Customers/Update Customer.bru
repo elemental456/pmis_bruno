@@ -1,0 +1,29 @@
+meta {
+  name: Update Customer
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/customers/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name": "test1",
+      "taxId": "1234567890125",
+    "contactName": "contact-name test",
+  "paymentMethodId": 1,
+  "paymentTermId": 2,
+  "countryId": 1,
+  "provinceId": 1,
+  "postCode": "12345",
+  "address": "1/1 Moo 1"
+    }
+}
