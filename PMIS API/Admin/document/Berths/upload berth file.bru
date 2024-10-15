@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: {{PMIS_URL}}/v1/admin/documents/:docId/berths/:docBerthId/upload
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/berths/:docBerthId/uploads
   body: multipartForm
   auth: bearer
 }
 
 params:path {
-  docBerthId: 
+  docBerthId: 9
   docId: 31
 }
 
@@ -34,6 +34,6 @@ body:json {
 
 body:multipart-form {
   type: manifest
-  file: @file()
+  file: @file(/Users/mtb730942/Downloads/462460494_843989017897537_7478166584463419787_n.jpg)
   ~type: other
 }
