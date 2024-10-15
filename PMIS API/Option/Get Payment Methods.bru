@@ -1,0 +1,15 @@
+meta {
+  name: Get Payment Methods
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/payment-methods
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

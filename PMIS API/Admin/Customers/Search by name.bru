@@ -1,0 +1,20 @@
+meta {
+  name: Search by name
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/customers/search?search=test&field=name
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: test
+  field: name
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
