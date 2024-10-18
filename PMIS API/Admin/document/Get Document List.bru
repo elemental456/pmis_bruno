@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/documents/?page=1&limit=12&search&type&flag&showAll=true
+  url: {{PMIS_URL}}/v1/admin/documents/?page=1&limit=12&search&begin&end&status&berthId
   body: json
   auth: bearer
 }
@@ -14,9 +14,10 @@ params:query {
   page: 1
   limit: 12
   search: 
-  type: 
-  flag: 
-  showAll: true
+  begin: 
+  end: 
+  status: 
+  berthId: 
 }
 
 auth:bearer {
