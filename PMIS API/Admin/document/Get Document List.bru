@@ -5,19 +5,19 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/documents/?page=1&limit=12&search&begin&end&status&berthId
+  url: {{PMIS_URL}}/v1/admin/documents/?page=1&search&begin=2024-10-10&end=2024-10-17&status&berthId
   body: json
   auth: bearer
 }
 
 params:query {
   page: 1
-  limit: 12
   search: 
-  begin: 
-  end: 
+  begin: 2024-10-10
+  end: 2024-10-17
   status: 
   berthId: 
+  ~limit: 10
 }
 
 auth:bearer {
