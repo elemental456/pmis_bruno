@@ -1,0 +1,15 @@
+meta {
+  name: Get Vessel Status
+  type: http
+  seq: 18
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/vessel-status
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
