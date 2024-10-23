@@ -1,17 +1,17 @@
 meta {
-  name: Get By ID
+  name: Get Review
   type: http
-  seq: 4
+  seq: 5
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/documents/:id
+  url: {{PMIS_URL}}/v1/admin/documents/:id/reviews
   body: json
   auth: bearer
 }
 
 params:path {
-  id: 7
+  id: 16
 }
 
 auth:bearer {

@@ -1,13 +1,17 @@
 meta {
-  name: Create Draft
+  name: Update Document
   type: http
-  seq: 1
+  seq: 5
 }
 
-post {
-  url: {{PMIS_URL}}/v1/admin/documents
+put {
+  url: {{PMIS_URL}}/v1/admin/documents/:docId
   body: json
   auth: bearer
+}
+
+params:path {
+  docId: 26
 }
 
 auth:bearer {
@@ -19,7 +23,7 @@ body:json {
     "vesselFlagId": 3,
     "vesselTypeId": 1,
     "vesselId":4,
-    "vesselOwner": "test",
+    "vesselOwner": "test1234",
     "vesselName": "sssdd",
     "vesselImoNumber": "911545435231",
     "vesselMMSiNumber": "2221121521",
