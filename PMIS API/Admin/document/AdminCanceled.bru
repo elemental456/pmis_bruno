@@ -1,17 +1,17 @@
 meta {
-  name: Submit To Review
+  name: AdminCanceled
   type: http
-  seq: 9
+  seq: 12
 }
 
 put {
-  url: {{PMIS_URL}}/v1/admin/documents/:docId/cancel
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/admin-cancel
   body: multipartForm
   auth: bearer
 }
 
 params:path {
-  docId: 1
+  docId: 26
 }
 
 auth:bearer {

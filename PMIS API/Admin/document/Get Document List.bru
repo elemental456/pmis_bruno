@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/documents/?page=1&search&begin=2024-10-10&end=2024-10-17&status&berthId
+  url: {{PMIS_URL}}/v1/admin/documents/?page=1&search&berthId=15
   body: json
   auth: bearer
 }
@@ -13,10 +13,10 @@ get {
 params:query {
   page: 1
   search: 
-  begin: 2024-10-10
-  end: 2024-10-17
-  status: 
-  berthId: 
+  berthId: 15
+  ~begin: 2024-10-10
+  ~end: 2024-10-17
+  ~status: Rejected
   ~limit: 10
 }
 
