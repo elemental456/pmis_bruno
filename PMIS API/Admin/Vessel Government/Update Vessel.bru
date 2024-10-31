@@ -1,0 +1,33 @@
+meta {
+  name: Update Vessel
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/vessel-government/:vesselId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  vesselId: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "name": "เรือเทส2",
+    "officialNumber": "1239",
+    "lengthOverall": 2000,
+    "breadthExtreme": 1450,
+    "depth": 500,
+    "displacement": 500,
+    "vesselFlagId": 1,
+    "vesselTypeId": 1,
+    "fileId": 0
+  }
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Create Vessel
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/vessel-government/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "name": "เรือเทส1",
+    "officialNumber": "1239",
+    "lengthOverall": 2000,
+    "breadthExtreme": 1450,
+    "depth": 500,
+    "displacement": 500,
+    "vesselFlagId": 1,
+    "vesselTypeId": 1,
+    "fileId": 0
+  }
+}
