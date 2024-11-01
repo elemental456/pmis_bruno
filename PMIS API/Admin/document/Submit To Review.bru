@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: {{PMIS_URL}}/v1/admin/documents/:docId/cancel
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/submit-for-review
   body: multipartForm
   auth: bearer
 }
 
 params:path {
-  docId: 1
+  docId: 32
 }
 
 auth:bearer {
