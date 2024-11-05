@@ -1,0 +1,27 @@
+meta {
+  name: Update Doc Vessel In
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/documents/vessel-in/:logBookId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  logBookId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "jettyId":0,
+    "etb":"",
+    "etd":""
+  }
+}

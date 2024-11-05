@@ -1,0 +1,19 @@
+meta {
+  name: Get Doc Vessel In
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/documents/vessel-in/:berthAlt
+  body: none
+  auth: bearer
+}
+
+params:path {
+  berthAlt: mit
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
