@@ -1,0 +1,22 @@
+meta {
+  name: Get Log Books
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{hostname}}/api/v1/admin/vtms/log-book?search&status&date&berth_id
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: null
+  status: null
+  date: null
+  berth_id: null
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,114 @@
+meta {
+  name: Update Log Book
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{hostname}}/api/v1/admin/vtms/log-book/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 5
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "document_berth_id":0,
+      "vessel_id":1,
+      "gross_tonnage":2323,
+      "depth":1100.9,
+      "port_id_next":1,
+      "port_id_last":4,
+      "voyage":"2345",
+      "details":[
+          {
+              "type_doc":"Arrival",
+              "berth_id":7,
+              "purpose_id":1,
+              "locate_id":1,
+              "use_berth_id":1,
+              "jetty_id":5,
+              "mooring_date":"2024-10-01T17:00:00+07:00",
+              "departure_date":"2024-10-01T19:00:00+07:00"
+          }
+      ],
+      "tugs":[
+          {
+              "id":5,
+              "tug_id":1,
+              "is_delete":true
+          },
+          {
+              "id":6,
+              "tug_id":1,
+              "is_delete":true
+          },
+          {
+              "id":7,
+              "tug_id":1,
+              "is_delete":true
+          },
+          {
+              "id":8,
+              "tug_id":1,
+              "is_delete":true
+          }
+      ],
+      "pilots":[
+          {
+              "id":4,
+              "pilot_id":1,
+              "is_delete":true
+          },
+          {
+              "id":5,
+              "pilot_id":1,
+              "is_delete":true
+          },
+          {
+              "id":6,
+              "pilot_id":1,
+              "is_delete":true
+          },
+          {
+              "id":7,
+              "pilot_id":1,
+              "is_delete":true
+          }
+      ],
+      "products":[
+          {
+              "id":4,
+              "product_sub_type_id":1,
+              "amount":1,
+              "unit":"MTon",
+              "is_delete":true
+          },{
+              "id":5,
+              "product_sub_type_id":1,
+              "amount":1,
+              "unit":"MTon",
+              "is_delete":true
+          },{
+              "id":6,
+              "product_sub_type_id":1,
+              "amount":1,
+              "unit":"MTon",
+              "is_delete":true
+          },{
+              "id":7,
+              "product_sub_type_id":1,
+              "amount":1,
+              "unit":"MTon",
+              "is_delete":true
+          }
+      ]
+  }
+}

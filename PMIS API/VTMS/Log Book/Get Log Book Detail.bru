@@ -1,0 +1,19 @@
+meta {
+  name: Get Log Book Detail
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{hostname}}/api/v1/admin/vtms/log-book/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 5
+}
+
+auth:bearer {
+  token: {{token}}
+}

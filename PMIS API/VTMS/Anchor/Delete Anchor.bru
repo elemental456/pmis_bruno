@@ -1,0 +1,19 @@
+meta {
+  name: Delete Anchor
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{hostname}}/api/v1/admin/vtms/anchor/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
