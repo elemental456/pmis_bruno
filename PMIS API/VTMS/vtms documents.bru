@@ -1,0 +1,15 @@
+meta {
+  name: vtms documents
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{hostname}}/api/v1/admin/vtms/documents
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

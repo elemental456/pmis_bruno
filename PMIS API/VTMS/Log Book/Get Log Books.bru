@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{hostname}}/api/v1/admin/vtms/log-book?search&status&date&berth_id
+  url: {{hostname}}/api/v1/admin/vtms/log-book?search=null&status=null&date=null&berth_id=null&log_type
   body: none
   auth: bearer
 }
@@ -15,6 +15,7 @@ params:query {
   status: null
   date: null
   berth_id: null
+  log_type: 
 }
 
 auth:bearer {
