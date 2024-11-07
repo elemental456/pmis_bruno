@@ -5,11 +5,11 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/vessel-import/
+  url: {{PMIS_URL}}/v1/admin/vessel-import/list
   body: none
   auth: bearer
 }
 
 auth:bearer {
-  token: 
+  token: {{PMIS_TOKEN}}
 }
