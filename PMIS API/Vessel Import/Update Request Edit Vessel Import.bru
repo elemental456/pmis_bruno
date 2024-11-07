@@ -6,14 +6,20 @@ meta {
 
 put {
   url: {{PMIS_URL}}/v1/admin/vessel-import/edit/:id
-  body: none
+  body: json
   auth: bearer
 }
 
 params:path {
-  id: 
+  id: 2
 }
 
 auth:bearer {
-  token: 
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "note":"ขอแก้ไขเวลา"
+  }
 }
