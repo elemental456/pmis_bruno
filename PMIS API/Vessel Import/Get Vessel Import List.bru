@@ -5,9 +5,20 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/vessel-import/list
+  url: {{PMIS_URL}}/v1/admin/vessel-import/list?search&created&mooringDate&unmooringDate&vesselFlagId&vesselTypeId&berthId&jettyId
   body: none
   auth: bearer
+}
+
+params:query {
+  search: 
+  created: 
+  mooringDate: 
+  unmooringDate: 
+  vesselFlagId: 
+  vesselTypeId: 
+  berthId: 
+  jettyId: 
 }
 
 auth:bearer {
