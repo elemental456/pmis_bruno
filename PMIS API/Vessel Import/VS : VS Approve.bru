@@ -1,0 +1,25 @@
+meta {
+  name: VS : VS Approve
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/vessel-import/approve/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "grossTonnage":23.222
+  }
+}

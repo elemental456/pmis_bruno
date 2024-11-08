@@ -1,0 +1,20 @@
+meta {
+  name: VS : VS Approve Edit
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/vessel-import/approve/edit/:id/:approve
+  body: json
+  auth: bearer
+}
+
+params:path {
+  approve: true
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

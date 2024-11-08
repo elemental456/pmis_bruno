@@ -1,0 +1,19 @@
+meta {
+  name: Get Berth To Document
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/documents/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 20
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

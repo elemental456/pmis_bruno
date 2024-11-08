@@ -1,0 +1,19 @@
+meta {
+  name: Delete Vessel Government By ID
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{PMIS_URL}}/v1/admin/vessel-government/:vesselId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  vesselId: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

@@ -1,0 +1,25 @@
+meta {
+  name: VS : VS Return
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/vessel-import/return/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "note":"กลับไปแก้มาใหม่"
+  }
+}

@@ -1,17 +1,13 @@
 meta {
-  name: Update Vessel
+  name: Create Vessel Government
   type: http
-  seq: 4
+  seq: 3
 }
 
-put {
-  url: {{PMIS_URL}}/v1/admin/vessel-government/:vesselId
+post {
+  url: {{PMIS_URL}}/v1/admin/vessel-government/
   body: json
   auth: bearer
-}
-
-params:path {
-  vesselId: 1
 }
 
 auth:bearer {
@@ -20,7 +16,7 @@ auth:bearer {
 
 body:json {
   {
-    "name": "เรือเทส2",
+    "name": "เรือเทส1",
     "officialNumber": "1239",
     "lengthOverall": 2000,
     "breadthExtreme": 1450,

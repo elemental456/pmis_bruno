@@ -1,17 +1,17 @@
 meta {
-  name: Get Vessel By ID
+  name: Delete Log Book By ID
   type: http
-  seq: 2
+  seq: 10
 }
 
-get {
-  url: {{PMIS_URL}}/v1/admin/vessel-government/:vesselId
+delete {
+  url: {{PMIS_URL}}/v1/admin/vtms/log-book/:id
   body: json
   auth: bearer
 }
 
 params:path {
-  vesselId: 1
+  id: 
 }
 
 auth:bearer {

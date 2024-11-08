@@ -1,0 +1,22 @@
+meta {
+  name: Get Doc
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/vtms/log-book?search&status&date&berth_id
+  body: json
+  auth: bearer
+}
+
+params:query {
+  search: 
+  status: 
+  date: 
+  berth_id: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

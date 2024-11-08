@@ -1,0 +1,19 @@
+meta {
+  name: Get Log Book By Berth Document
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/vtms/log-book/doc/:documentId/berth
+  body: json
+  auth: bearer
+}
+
+params:path {
+  documentId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
