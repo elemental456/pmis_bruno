@@ -18,3 +18,14 @@ params:path {
 auth:bearer {
   token: {{PMIS_TOKEN}}
 }
+
+body:json {
+  {
+    "files":[
+      {
+        "id":1,
+        "is_delete":true
+      }
+    ]
+  }
+}
