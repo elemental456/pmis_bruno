@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/vtms/log-book?search&status&date&berth_id
+  url: {{PMIS_URL}}/v1/admin/vtms/log-book?search&status&date&berth_id&log_type=vessel-in
   body: json
   auth: bearer
 }
@@ -15,6 +15,7 @@ params:query {
   status: 
   date: 
   berth_id: 
+  log_type: vessel-in
 }
 
 auth:bearer {
