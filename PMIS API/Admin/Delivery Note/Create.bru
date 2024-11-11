@@ -1,0 +1,43 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PMIS_URL}}/v1/delivery-notes/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "vesselId": 6,
+    "vehicleTypeId": 1,
+    "checkedInAt": "2024-11-10T08:00:00Z",
+    "checkedOutAt": "2024-11-10T17:00:00Z",
+    "logisticId": 1,
+    "logisticName": "Kerry Express",
+    "consignee": "John Doe",
+    "items": [
+      {
+        "itemNumber": "ITEM001",
+        "productTypeId": 1,
+        "quantity": 10,
+        "unit": "kg",
+        "note": "Handle with care"
+      },
+      {
+        "itemNumber": "ITEM002",
+        "productTypeId": 2,
+        "quantity": 5,
+        "unit": "pcs",
+        "note": "Fragile"
+      }
+    ]
+  }
+}

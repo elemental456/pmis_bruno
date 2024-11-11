@@ -1,0 +1,19 @@
+meta {
+  name: Get By Id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/delivery-notes/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
