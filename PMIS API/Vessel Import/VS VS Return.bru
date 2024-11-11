@@ -1,17 +1,16 @@
 meta {
-  name: VS : VS Approve Edit
+  name: VS VS Return
   type: http
-  seq: 11
+  seq: 9
 }
 
 put {
-  url: {{PMIS_URL}}/v1/admin/vessel-import/approve/edit/:id/:approve
+  url: {{PMIS_URL}}/v1/admin/vessel-import/return/:id
   body: json
   auth: bearer
 }
 
 params:path {
-  approve: true
   id: 1
 }
 
@@ -21,6 +20,7 @@ auth:bearer {
 
 body:json {
   {
+    "note":"กลับไปแก้มาใหม่",
     "files":[
       {
         "id":1,
