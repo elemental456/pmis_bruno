@@ -1,0 +1,26 @@
+meta {
+  name: VS Get Vessel Import Send List
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/vessel-import/list/send?search&status&berthId&jettyId&mooringDateVS&unmooringDateVS&mooringDateVS&unmooringDateVT
+  body: none
+  auth: bearer
+}
+
+params:query {
+  search: 
+  status: 
+  berthId: 
+  jettyId: 
+  mooringDateVS: 
+  unmooringDateVS: 
+  mooringDateVS: 
+  unmooringDateVT: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
