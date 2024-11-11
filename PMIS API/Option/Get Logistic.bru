@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/options/logistics
+  url: {{PMIS_URL}}/v1/options/logistics?q=Kerry
   body: none
   auth: bearer
+}
+
+params:query {
+  q: Kerry
 }
 
 auth:bearer {

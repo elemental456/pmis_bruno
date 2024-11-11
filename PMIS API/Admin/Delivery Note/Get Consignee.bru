@@ -1,0 +1,19 @@
+meta {
+  name: Get Consignee
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{PMIS_URL}}/v1/delivery-notes/consignees?q=aloha
+  body: json
+  auth: bearer
+}
+
+params:query {
+  q: aloha
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
