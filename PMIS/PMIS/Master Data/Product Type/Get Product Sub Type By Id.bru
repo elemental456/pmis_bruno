@@ -1,0 +1,19 @@
+meta {
+  name: Get Product Sub Type By Id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{hostname}}/api/v1/admin/master-data/product-sub-type/:productSubTypeId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  productSubTypeId: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

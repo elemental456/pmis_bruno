@@ -1,0 +1,19 @@
+meta {
+  name: Get Purpose By Id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{hostname}}/api/v1/admin/master-data/purpose/:purposeId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  purposeId: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

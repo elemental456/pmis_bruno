@@ -1,0 +1,22 @@
+meta {
+  name: Add Port
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{hostname}}/api/v1/admin/master-data/port
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "name":"Other",
+      "country_id":1
+  }
+}

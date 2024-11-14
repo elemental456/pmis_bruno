@@ -1,0 +1,22 @@
+meta {
+  name: Get Vessel Type
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{hostname}}/api/v1/admin/master-data/vessel-type?limit=5&page=1&search=&status=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: 5
+  page: 1
+  search: 
+  status: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

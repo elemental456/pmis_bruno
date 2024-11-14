@@ -1,0 +1,21 @@
+meta {
+  name: Add Use Berth
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{hostname}}/api/v1/admin/master-data/use-berth
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "name":"Other1"
+  }
+}

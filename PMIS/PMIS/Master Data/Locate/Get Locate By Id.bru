@@ -1,0 +1,19 @@
+meta {
+  name: Get Locate By Id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{hostname}}/api/v1/admin/master-data/locate/:locateId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  locateId: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

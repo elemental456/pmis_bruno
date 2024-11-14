@@ -1,0 +1,26 @@
+meta {
+  name: Update Locate
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{hostname}}/api/v1/admin/master-data/locate/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "name": "EditOther",
+      "activated": true
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Subdistricts
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{hostname}}/api/v1/options/subdistricts
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

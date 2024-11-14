@@ -1,0 +1,19 @@
+meta {
+  name: Get Vessel Type By Id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{hostname}}/api/v1/admin/master-data/vessel-type/:vesselTypeId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  vesselTypeId: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
