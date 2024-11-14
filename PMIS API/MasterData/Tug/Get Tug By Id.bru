@@ -1,0 +1,19 @@
+meta {
+  name: Get Tug By Id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/tug/:tugId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  tugId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}{{token}}
+}

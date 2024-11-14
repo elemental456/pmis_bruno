@@ -1,0 +1,28 @@
+meta {
+  name: Update Purpose
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/master-data/purpose/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "purpose_name":"test edit purpose 1",
+      "purpose_type_id":2,
+      "purpose_type_name":"Loading",
+      "status": true
+  }
+}

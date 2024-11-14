@@ -1,0 +1,30 @@
+meta {
+  name: Update Vessel Flag
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/master-data/vessel-flag/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name":"THAI",
+      "activated": true,
+      "filePath": "uploads/register/5a86b8cc-a0ee-4989-8d99-4e6a08a5e07e.jpg",
+      "fileName": "453879775_530222699338223_2786107937523759859_n.jpg",
+      "extension": "image/jpeg",
+      "size": 329641
+  }
+}

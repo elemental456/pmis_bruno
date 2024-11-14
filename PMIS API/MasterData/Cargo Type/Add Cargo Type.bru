@@ -1,0 +1,21 @@
+meta {
+  name: Add Cargo Type
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/master-data/locate
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name":"Other"
+  }
+}

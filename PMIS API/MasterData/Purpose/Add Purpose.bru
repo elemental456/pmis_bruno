@@ -1,0 +1,23 @@
+meta {
+  name: Add Purpose
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/master-data/purpose
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "sub_purpose_name":"test11 sub purpose 1",
+      "purpose_id":0,
+      "purpose_name":"test11 purpose main 33"
+  }
+}

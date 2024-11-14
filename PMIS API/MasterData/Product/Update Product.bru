@@ -1,0 +1,27 @@
+meta {
+  name: Update Product
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/master-data/product/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name":"Other1",
+      "product_sub_type_id":1,
+      "status": true
+  }
+}

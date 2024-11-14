@@ -1,0 +1,37 @@
+meta {
+  name: Update Tug
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/master-data/tug/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name_th": "EditOther",
+      "name_en": "EditOther",
+      "name_alt": "EditOTH",
+      "vessel_type_id": 1,
+      "jettys": [
+          {
+              "name": "EditOther1"
+          },
+          {
+              "name": "EditOther2"
+          }
+      ],
+      "activated": true
+  }
+}

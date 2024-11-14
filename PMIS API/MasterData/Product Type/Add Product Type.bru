@@ -1,0 +1,23 @@
+meta {
+  name: Add Product Type
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/master-data/product-type
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "product_group_id":0,
+      "product_group_name":"ProductTypeTest1",
+      "product_type_name":"sub product"
+  }
+}

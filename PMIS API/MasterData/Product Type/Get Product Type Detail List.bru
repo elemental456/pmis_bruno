@@ -1,0 +1,22 @@
+meta {
+  name: Get Product Type Detail List
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/product-type?limit=10&page=1&search=&status=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: 10
+  page: 1
+  search: 
+  status: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

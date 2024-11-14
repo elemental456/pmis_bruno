@@ -1,0 +1,19 @@
+meta {
+  name: Get Product Type By Product Group Id
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/product-type/type/:productGroupId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  productGroupId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

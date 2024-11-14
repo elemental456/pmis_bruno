@@ -1,0 +1,21 @@
+meta {
+  name: Add Cargo Wharfage
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/master-data/use-berth
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name":"Other1"
+  }
+}
