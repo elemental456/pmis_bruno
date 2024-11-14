@@ -1,0 +1,19 @@
+meta {
+  name: Get Activated Product Type By Group
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/product-types/:productGroupId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  productGroupId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
