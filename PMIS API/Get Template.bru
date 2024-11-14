@@ -1,0 +1,19 @@
+meta {
+  name: Get Template
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/template/:fileTemplate
+  body: none
+  auth: bearer
+}
+
+params:path {
+  fileTemplate: vsTemplate
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
