@@ -1,0 +1,15 @@
+meta {
+  name: Get Purpose Type
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/purpose-type
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

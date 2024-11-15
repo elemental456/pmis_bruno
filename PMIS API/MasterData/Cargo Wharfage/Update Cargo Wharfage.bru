@@ -1,0 +1,26 @@
+meta {
+  name: Update Cargo Wharfage
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/master-data/use-berth/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name": "EditOther",
+      "status": true
+  }
+}

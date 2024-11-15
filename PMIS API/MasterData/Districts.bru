@@ -1,0 +1,15 @@
+meta {
+  name: Districts
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/districts
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

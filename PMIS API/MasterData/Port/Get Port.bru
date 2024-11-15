@@ -1,0 +1,23 @@
+meta {
+  name: Get Port
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/port?limit=1&page=1&search=&status=&country_id=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: 1
+  page: 1
+  search: 
+  status: 
+  country_id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

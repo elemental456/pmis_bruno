@@ -1,0 +1,22 @@
+meta {
+  name: Get Vessel Type
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/vessel-type?limit&page=1&search&status
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: 
+  page: 1
+  search: 
+  status: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

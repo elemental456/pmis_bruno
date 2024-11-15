@@ -1,0 +1,23 @@
+meta {
+  name: Get Pilot
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/pilot?limit=10&page=1&search=&status=&vessel_type_id=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: 10
+  page: 1
+  search: 
+  status: 
+  vessel_type_id: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get Tugs
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/tugs
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

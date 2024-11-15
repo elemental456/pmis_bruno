@@ -1,0 +1,22 @@
+meta {
+  name: Add Product
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/master-data/product
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name":"Other1",
+      "product_sub_type_id":1
+  }
+}

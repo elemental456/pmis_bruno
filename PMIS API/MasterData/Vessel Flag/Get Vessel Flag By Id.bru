@@ -1,0 +1,19 @@
+meta {
+  name: Get Vessel Flag By Id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/vessel-flag/:vesselFlagId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  vesselFlagId: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

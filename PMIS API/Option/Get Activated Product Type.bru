@@ -1,0 +1,15 @@
+meta {
+  name: Get Activated Product Type
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/product-types
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

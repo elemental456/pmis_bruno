@@ -1,0 +1,15 @@
+meta {
+  name: Provinces
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/provinces
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

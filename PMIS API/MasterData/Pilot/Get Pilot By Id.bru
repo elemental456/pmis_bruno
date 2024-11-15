@@ -1,0 +1,19 @@
+meta {
+  name: Get Pilot By Id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/pilot/:pilotId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  pilotId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}{{token}}
+}

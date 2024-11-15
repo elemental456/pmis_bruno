@@ -1,0 +1,27 @@
+meta {
+  name: Update Port
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/master-data/port/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name": "EditOther",
+      "country_id": 1,
+      "activated": true
+  }
+}
