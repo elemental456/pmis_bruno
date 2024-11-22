@@ -21,3 +21,19 @@ tests {
   let data = res.getBody();
   bru.setEnvVar("PMIS_TOKEN",data?.data?.token?.access_token);
 }
+
+docs {
+  Agency
+  
+  {
+    "email":"agency1@gmail.com",
+    "password": "Passw0rd"
+  }
+  
+  Admin
+  
+  {
+    "email":"admin2@gmail.com",
+    "password": "Passw0rd"
+  }
+}
