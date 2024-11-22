@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/vessels/?page=1&limit=12&search&type&flag
+  url: {{PMIS_URL}}/v1/admin/vessels/?page=1&limit=12&search&type&flag&showAll=false
   body: json
   auth: bearer
 }
@@ -16,6 +16,7 @@ params:query {
   search: 
   type: 
   flag: 
+  showAll: false
 }
 
 auth:bearer {
