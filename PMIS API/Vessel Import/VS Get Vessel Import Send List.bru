@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/vessel-import/list/send?search&status&berthId&jettyId&mooringDateVS&unmooringDateVS&mooringDateVS&unmooringDateVT
+  url: {{PMIS_URL}}/v1/admin/vessel-import/list/send?search&status&berthId&jettyId&mooringDateVS&unmooringDateVS&mooringDateVT&unmooringDateVT
   body: none
   auth: bearer
 }
@@ -17,7 +17,7 @@ params:query {
   jettyId: 
   mooringDateVS: 
   unmooringDateVS: 
-  mooringDateVS: 
+  mooringDateVT: 
   unmooringDateVT: 
 }
 
