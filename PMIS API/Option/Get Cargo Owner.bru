@@ -1,0 +1,15 @@
+meta {
+  name: Get Cargo Owners
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/cargo-owners
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
