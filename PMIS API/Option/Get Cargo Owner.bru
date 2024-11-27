@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/options/cargo-owners
+  url: {{PMIS_URL}}/v1/options/cargo-owners?q=owner
   body: none
   auth: bearer
+}
+
+params:query {
+  q: owner
 }
 
 auth:bearer {
