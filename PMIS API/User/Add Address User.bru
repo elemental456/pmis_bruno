@@ -1,0 +1,36 @@
+meta {
+  name: Add Address User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/user/address/:userId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  userId: 50
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "tax": "09374637493",
+    "company": "ทดสอบระบบ",
+    "fullName": "นายทดสอบระบบ",
+    "paymentMethodId": 1,
+    "paymentTermId": 1,
+    "address": "1151 ม.8",
+    "countryId": 219,
+    "subDistrictId": 100105,
+    "districtId": 1001,
+    "provinceId": 1,
+    "stageProvince": "",
+    "zipCode": "10200"
+  }
+}

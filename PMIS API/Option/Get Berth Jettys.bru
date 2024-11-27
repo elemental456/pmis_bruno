@@ -1,0 +1,19 @@
+meta {
+  name: Get Berth Jettys
+  type: http
+  seq: 29
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/berth-jetties/:berthId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  berthId: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

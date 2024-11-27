@@ -1,0 +1,19 @@
+meta {
+  name: Get User Address Detail
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/user/address/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

@@ -1,0 +1,37 @@
+meta {
+  name: Update Address User
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/user/address/:userId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  userId: 50
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "id":1,
+    "tax": "02229374637493",
+    "company": "11ทดสอบระบบ",
+    "fullName": "11นายทดสอบระบบ",
+    "paymentMethodId": 1,
+    "paymentTermId": 1,
+    "address": "222221151 ม.8",
+    "countryId": 219,
+    "subDistrictId": 100105,
+    "districtId": 1001,
+    "provinceId": 1,
+    "stageProvince": "",
+    "zipCode": "10200"
+  }
+}

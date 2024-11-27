@@ -1,0 +1,34 @@
+meta {
+  name: Rename Document Vessel
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/file/:fileId/rename
+  body: json
+  auth: bearer
+}
+
+params:path {
+  fileId: 1
+  docId: 26
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "name": "newname.docx"
+  }
+}
+
+docs {
+  "ship_particulars"
+  "ship_registry"
+  "internation_tonnage_cert"
+  "last_10_ports"
+  "power_of_attorney"
+}

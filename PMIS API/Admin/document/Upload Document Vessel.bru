@@ -1,13 +1,17 @@
 meta {
-  name: Update Vessel
+  name: Upload Document Vessel
   type: http
-  seq: 4
+  seq: 15
 }
 
-put {
-  url: {{PMIS_URL}}/v1/admin/vessels/3
-  body: json
+post {
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/file
+  body: multipartForm
   auth: bearer
+}
+
+params:path {
+  docId: 26
 }
 
 auth:bearer {
@@ -16,21 +20,20 @@ auth:bearer {
 
 body:json {
   {
-    "name": "เรือเทส1133",
-    "callSign": "เจ้าเทส 111",
+    "name": "เรือเทส1",
+    "callSign": "เจ้าเทส 1",
     "imoNumber": "1234",
     "owner": "มานี",
-    "owner_id" : 1,
     "breadthExtreme": 1450,
     "depth": 500,
-    "grossTonnage": 1230,
+    "grossTonnage": 1237,
     "lengthOverall": 2000,
     "loadWeight": 1230,
     "mainEngine": "โยโยต้า เครื่อง 2000",
     "bandAndModel": "เบ็นซ์",
     "mmsiNumber": "mmsi123",
     "netTonnage": 190,
-    "officialNumber": "1111121",
+    "officialNumber": "1239",
     "vesselFlagId": 1,
     "vesselTypeId": 1,
     "uploadFiles": [
@@ -48,4 +51,17 @@ body:json {
       }
     ]
   }
+}
+
+body:multipart-form {
+  type: 
+  file: @file()
+}
+
+docs {
+  "ship_particulars"
+  "ship_registry"
+  "internation_tonnage_cert"
+  "last_10_ports"
+  "power_of_attorney"
 }
