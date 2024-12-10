@@ -1,0 +1,15 @@
+meta {
+  name: Get Vessal Agent By ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies/36
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

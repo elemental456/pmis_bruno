@@ -1,0 +1,16 @@
+meta {
+  name: Get Pending
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/port-dues/?page=1&search=X0019/2567
+  body: none
+  auth: none
+}
+
+params:query {
+  page: 1
+  search: X0019/2567
+}
