@@ -1,0 +1,19 @@
+meta {
+  name: Get by id
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/customers/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 9
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
