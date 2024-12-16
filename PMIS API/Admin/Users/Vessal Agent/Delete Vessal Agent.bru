@@ -1,0 +1,15 @@
+meta {
+  name: Delete Vessal Agent
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies/23
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

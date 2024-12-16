@@ -1,0 +1,23 @@
+meta {
+  name: Get Pending Detail
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/port-dues/pending/:docId
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+params:path {
+  docId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

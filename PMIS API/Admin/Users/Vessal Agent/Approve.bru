@@ -1,0 +1,15 @@
+meta {
+  name: Approve
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/vessel-agencies/36/approve
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
