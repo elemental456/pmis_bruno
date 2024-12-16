@@ -1,0 +1,53 @@
+meta {
+  name: Export PDF
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/documents/:id/export-pdf
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 26
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "vesselFlagId": 4,
+    "vesselTypeId": 2,
+    "vesselId": 13,
+    "vesselOwner": "มานี",
+    "vesselName": "aa",
+    "vesselImoNumber": "1556",
+    "vesselMMSiNumber": "44455",
+    "vesselDSVNumber": "",
+    "vesselOfficialNumber": "4",
+    "vesselCallSign": "8888",
+    "vesselNationality": "",
+    "vesselCountry": "",
+    "vesselLoadWeight": 111,
+    "vesselGrossTonnage": 55,
+    "vesselNetTonnage": 44,
+    "vesselLengthOverall": 55,
+    "vesselBreadthExtreme": 44,
+    "vesselDepth": 55,
+    "vesselMainEngine": "test",
+    "vesselBandAndModel": "m-69",
+    "vesselLicenseExpiredDate": "",
+    "vesselUploadFiles": [
+      {
+        "filePath": "/vessel/184486a9-8848-4736-81ff-1abef3418180",
+        "fileName": "sukho.pdf",
+        "extension": "application/xml",
+        "size": 8862891
+      }
+    ]
+  }
+}
