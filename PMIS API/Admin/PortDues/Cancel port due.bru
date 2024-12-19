@@ -1,17 +1,17 @@
 meta {
-  name: Delete port due
+  name: Cancel port due
   type: http
   seq: 7
 }
 
-delete {
-  url: {{PMIS_URL}}/v1/port-dues/:id
+put {
+  url: {{PMIS_URL}}/v1/port-dues/:id/cancel
   body: json
   auth: bearer
 }
 
 params:path {
-  id: 
+  id: 17
 }
 
 auth:bearer {
