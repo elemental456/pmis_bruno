@@ -1,5 +1,5 @@
 meta {
-  name: Add invoice references
+  name: Add port due references (CN, DN, RECEIPT)
   type: http
   seq: 4
 }
@@ -15,7 +15,7 @@ auth:bearer {
 }
 
 body:json {
-  { "portDueId": 13, "docType": "receipt", "portDueNumber": "REP-1000", "paidDate": "2024-12-12T15:30:47.437+07:00", "total": 10700 }
+  { "portDueId": 2, "docType": "credit_note", "portDueNumber": "CN-001", "total": -100 }
 }
 
 docs {
