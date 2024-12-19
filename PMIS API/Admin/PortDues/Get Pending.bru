@@ -5,12 +5,19 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/port-dues/?page=1&search=X0019/2567
+  url: {{PMIS_URL}}/v1/port-dues/pending?page=1&search=Kumamon&customerName=wisdomvast&berthId&eta=2024-10-10
   body: none
-  auth: none
+  auth: bearer
 }
 
 params:query {
   page: 1
-  search: X0019/2567
+  search: Kumamon
+  customerName: wisdomvast
+  berthId: 
+  eta: 2024-10-10
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
 }

@@ -1,0 +1,23 @@
+meta {
+  name: Get port dues (invoices)
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{PMIS_URL}}/v1/port-dues?page=1&search&customerName&berthId&eta
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  search: 
+  customerName: 
+  berthId: 
+  eta: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

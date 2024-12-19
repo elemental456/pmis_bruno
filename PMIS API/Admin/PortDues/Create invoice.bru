@@ -1,0 +1,98 @@
+meta {
+  name: Create invoice
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/port-dues
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "documentId": 54,
+    "docNumber": "0009/2567",
+    "requestDate": "2024-12-12T15:30:47.437+07:00",
+    "status": "",
+    "statusKey": "",
+    "docType": "invoice",
+    "portDueNumber": "",
+    "grossTonnage": 2000,
+    "berthId": "1",
+    "berthName": "ท่าเรืออุตสาหกรรมมาบตาพุด",
+    "eta": "2024-12-12T16:30:47.464+07:00",
+    "etd": "2024-12-12T17:30:47.464+07:00",
+    "createdAt": "2024-12-12T15:30:47.437+07:00",
+    "invoice": {
+      "id": 4,
+      "customerId": 17,
+      "customerCode": "",
+      "customerReference": "",
+      "documentId": 54,
+      "name": "wisdomvast company",
+      "taxId": "1212121122125",
+      "contactName": "esportTwoZero gameon",
+      "paymentMethodId": 1,
+      "paymentMethodName": "Full Payment",
+      "paymentTermId": 1,
+      "paymentTermName": "Full Payment",
+      "countryId": 219,
+      "countryName": "ไทย",
+      "subDistrictId": 103001,
+      "subDistrictName": "ลาดยาว",
+      "districtId": 1030,
+      "districtName": "เขตจตุจักร",
+      "provinceId": 1,
+      "provinceName": "กรุงเทพมหานคร",
+      "postCode": "10900",
+      "stageProvince": "นครปฐม",
+      "address": "25/14",
+      "phoneNumber": "",
+      "secondaryPhoneNumber": "",
+      "rate": 5,
+      "fee": 10000,
+      "vat": 7,
+      "vatTotal": 700,
+      "total": 10700,
+      "paymentPeriod": 1,
+      "dueDate": "2024-12-13T15:30:47.437+07:00",
+      "paidDate": null
+    },
+    "vessel": {
+      "vesselFlagId": 218,
+      "vesselTypeId": 5,
+      "id": 6,
+      "documentVesselId": 6,
+      "vesselId": 36,
+      "vesselOwner": "manee Wongree",
+      "vesselOwnerId": 4,
+      "vesselName": "Kumamon Ship",
+      "vesselImoNumber": "KM-00146",
+      "vesselMMSiNumber": "KM-00146-678",
+      "vesselDSVNumber": "",
+      "vesselOfficialNumber": "1-112-3567",
+      "vesselCallSign": "Kuma ship",
+      "vesselNationality": "",
+      "vesselCountry": "",
+      "vesselLoadWeight": 3000,
+      "vesselGrossTonnage": 2000,
+      "vesselNetTonnage": 500,
+      "vesselLengthOverall": 60,
+      "vesselBreadthExtreme": 40,
+      "vesselDepth": 12.3,
+      "vesselMainEngine": "KMT-1146",
+      "vesselBandAndModel": "KMT-1146 1-04",
+      "vesselLicenseExpiredDate": "2025-02-28T15:29:33.786+07:00",
+      "vesselFlagName": "Thailand",
+      "vesselFlagPath": "https://pmis-dev.wisdomcloud.net/data/flag/th.png",
+      "vesselTypeName": "CONTAINER SHIP",
+      "vesselUploadFiles": []
+    }
+  }
+}

@@ -1,0 +1,96 @@
+meta {
+  name: Delete port due
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{PMIS_URL}}/v1/port-dues/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "id": 0,
+    "documentId": 54,
+    "docNumber": "0009/2567",
+    "agencyName": "",
+    "requestDate": "2024-12-12T15:30:47.437+07:00",
+    "vessel": {
+      "vesselFlagId": 218,
+      "vesselTypeId": 5,
+      "id": 6,
+      "documentVesselId": 6,
+      "vesselId": 36,
+      "vesselOwner": "manee Wongree",
+      "vesselOwnerId": 4,
+      "vesselName": "Kumamon Ship",
+      "vesselImoNumber": "KM-00146",
+      "vesselMMSiNumber": "KM-00146-678",
+      "vesselDSVNumber": "",
+      "vesselOfficialNumber": "1-112-3567",
+      "vesselCallSign": "Kuma ship",
+      "vesselNationality": "",
+      "vesselCountry": "",
+      "vesselLoadWeight": 3000,
+      "vesselGrossTonnage": 2000,
+      "vesselNetTonnage": 500,
+      "vesselLengthOverall": 60,
+      "vesselBreadthExtreme": 40,
+      "vesselDepth": 12.3,
+      "vesselMainEngine": "KMT-1146",
+      "vesselBandAndModel": "KMT-1146 1-04",
+      "vesselLicenseExpiredDate": "2025-02-28T15:29:33.786+07:00",
+      "vesselFlagName": "Thailand",
+      "vesselFlagPath": "/flag/th.png",
+      "vesselTypeName": "CONTAINER SHIP",
+      "vesselUploadFiles": []
+    },
+    "invoice": {
+      "id": 4,
+      "customerId": 17,
+      "customerCode": "",
+      "documentId": 54,
+      "name": "wisdomvast company",
+      "taxId": "1212121122125",
+      "contactName": "esportTwoZero gameon",
+      "paymentMethodId": 1,
+      "paymentMethodName": "Full Payment",
+      "paymentTermId": 1,
+      "paymentTermName": "Full Payment",
+      "countryId": 219,
+      "countryName": "ไทย",
+      "subDistrictId": 103001,
+      "subDistrictName": "ลาดยาว",
+      "districtId": 1030,
+      "districtName": "เขตจตุจักร",
+      "provinceId": 1,
+      "provinceName": "กรุงเทพมหานคร",
+      "postCode": "10900",
+      "stageProvince": "นครปฐม",
+      "address": "25/14",
+      "phoneNumber": "1234",
+      "secondaryPhoneNumber": "5678"
+    },
+    "estimatedArrival": null,
+    "estimatedDeparture": null,
+    "grossTonnage": 2000,
+    "netTonnage": 500,
+    "rate": 5,
+    "fee": 10000,
+    "total": 10700,
+    "paymentPeriod": 1,
+    "paymentMethodId": 1,
+    "paymentMethodName": "Credit/Debit Card",
+    "paymentPeriodDate": "2024-12-13T15:30:47.437+07:00"
+  }
+}
