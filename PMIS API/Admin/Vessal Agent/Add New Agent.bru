@@ -16,13 +16,14 @@ auth:bearer {
 
 body:json {
   {
-    "email": "t2@t.com",
+    "email": "t3@t.com",
     "address": "88/8",
     "company": "manaosoftware",
     "fullName": "Test user",
     "mobilePhone": "0871907698",
     "personType": "Person", //Corporate
     "phone": "083418145", //
+    "countryId": 28,
     "provinceId": 38,
     "stageProvince": "string",
     "districtId": 5001,
@@ -57,6 +58,34 @@ body:json {
       {
         "filePath": "uploads/register/cb4c2a5e-ccd3-4137-b5b2-3076eb2c1dd8.xml",
         "fileName": "ex5.xml",
+        "extension": "application/xml",
+        "size": 12964
+      }
+    ]
+  }
+}
+
+docs {
+  Success payload: 
+  
+  {
+    "email": "t2@t.com",
+    "address": "88/8",
+    "company": "manaosoftware",
+    "fullName": "Test user",
+    "mobilePhone": "0871907698",
+    "personType": "Person", //Corporate
+    "phone": "083418145", //
+    "provinceId": 38,
+    "stageProvince": "string",
+    "districtId": 5001,
+    "subDistrictId": 500107,
+    "tax": "1509900489881",
+    "zipCode": "50200",
+    "uploadFiles": [
+      {
+        "filePath": "uploads/register/cb4c2a5e-ccd3-4137-b5b2-3076eb2c1dd8.xml",
+        "fileName": "ex.xml",
         "extension": "application/xml",
         "size": 12964
       }

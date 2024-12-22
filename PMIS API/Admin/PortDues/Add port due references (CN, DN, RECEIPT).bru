@@ -1,0 +1,50 @@
+meta {
+  name: Add port due references (CN, DN, RECEIPT)
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{PMIS_URL}}/v1/port-dues/ref
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  { "portDueId": 2, "docType": "credit_note", "portDueNumber": "CN-001", "total": -100 }
+}
+
+docs {
+  add credit note
+  
+  {
+      "portDueId": 2,
+      "docType": "credit_note",
+      "portDueNumber": "CN-001",
+      "total": -100
+  }
+  
+  add debit note
+  
+  {
+      "portDueId": 2,
+      "docType": "debit_note",
+      "portDueNumber": "DN-001",
+      "dueDate": "2024-12-12T15:30:47.437+07:00",
+      "total": -200
+  }
+  
+  add receipt
+  
+  {
+      "portDueId": 2,
+      "docType": "receipt",
+      "portDueNumber": "REP-1000",
+      "paidDate": "2024-12-12T15:30:47.437+07:00",
+      "total": -10700
+  }
+}
