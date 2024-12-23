@@ -1,0 +1,19 @@
+meta {
+  name: Get Authority By Id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/authority/:authorityId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  authorityId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}{{token}}
+}
