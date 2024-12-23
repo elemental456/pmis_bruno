@@ -1,0 +1,21 @@
+meta {
+  name: Get Authority
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/master-data/authority?limit=-1&page=1&search
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: -1
+  page: 1
+  search: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

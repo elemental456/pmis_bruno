@@ -1,0 +1,37 @@
+meta {
+  name: Update Authority
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/master-data/authority/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name_th": "EditOther",
+      "name_en": "EditOther",
+      "name_alt": "EditOTH",
+      "berth_type": "xxxxxx",
+      "jettys": [
+          {
+              "name": "EditOther1"
+          },
+          {
+              "name": "EditOther2"
+          }
+      ],
+      "activated": true
+  }
+}

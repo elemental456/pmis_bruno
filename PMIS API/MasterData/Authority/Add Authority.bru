@@ -1,0 +1,27 @@
+meta {
+  name: Add Authority
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/master-data/authority
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+      "name_th":"Other",
+      "name_en":"Other",
+      "name_alt":"OTH",
+      "berth_type":"xxxx",
+      "jettys":[
+          {"name":"Other1"},{"name":"Other2"}
+      ]
+  }
+}
