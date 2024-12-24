@@ -1,0 +1,46 @@
+meta {
+  name: Add Vessel Import
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/vessel-import/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "vesselId": 1,
+    "berthId": 1,
+    "grossTonnage": 20.345,
+    "mooringDate": "2024-10-10T13:45:00.000Z",
+    "unmooringDate": "2024-10-10T19:45:00.000Z",
+    "jettyId": 14,
+    "note": "",
+    "files": [
+      {
+        "fileId": 0,
+        "name": ""
+      }
+    ],
+    "products": [
+      {
+        "purposeId": 1,
+        "cargoTypeId": 1,
+        "cargoWharfageId": 1,
+        "productTypeId": 1,
+        "productGroupId": 3,
+        "productId": 0,
+        "productName": "ทดสอบสินค้า",
+        "mTonQty": 1.23,
+        "rTonQty": 4.56
+      }
+    ]
+  }
+}
