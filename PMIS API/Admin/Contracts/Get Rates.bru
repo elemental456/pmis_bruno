@@ -1,0 +1,26 @@
+meta {
+  name: Get Rates
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{PMIS_URL}}/v1/contracts/rates
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "start": "2024-11-10T08:00:00Z",
+    "end": "2049-11-09T08:00:00Z",
+    "initialRate": 500.00,
+    "annualIncreaseRate": 3,
+    "rateChangeCycle": 2,
+    "rateChangeStartDate": "2027-11-15T08:00:00Z"
+  }
+}

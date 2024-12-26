@@ -1,0 +1,19 @@
+meta {
+  name: Delete Contract
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{PMIS_URL}}/v1/contracts/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

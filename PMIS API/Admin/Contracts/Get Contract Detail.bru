@@ -1,0 +1,19 @@
+meta {
+  name: Get Contract Detail
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/contracts/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

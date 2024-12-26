@@ -1,0 +1,33 @@
+meta {
+  name: Update Contract
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{PMIS_URL}}/v1/contracts/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "contractNo": "1114",
+    "berthId": 1,
+    "berthName": "test",
+    "start": "2024-11-10T08:00:00Z",
+    "end": "2027-11-10T08:00:00Z",
+    "initialRate": 500.00,
+    "annualIncreaseRate": 3,
+    "rateChangeCycle": 1,
+    "rateChangeStartDate": "2027-11-15T08:00:00Z"
+  }
+}
