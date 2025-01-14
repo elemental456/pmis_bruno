@@ -1,0 +1,21 @@
+meta {
+  name: Report 7 - DocumentCountReport-excel
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/document-count/excel?berthId=2&startDate=2024-12-10&endDate=2025-01-13
+  body: none
+  auth: bearer
+}
+
+params:query {
+  berthId: 2
+  startDate: 2024-12-10
+  endDate: 2025-01-13
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
