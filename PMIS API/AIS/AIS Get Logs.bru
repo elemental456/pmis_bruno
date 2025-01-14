@@ -5,9 +5,15 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/ais/logs
+  url: {{PMIS_URL}}/v1/admin/ais/logs?arrivalBeginDate&arrivalEndDate&berthId
   body: multipartForm
   auth: bearer
+}
+
+params:query {
+  arrivalBeginDate: 
+  arrivalEndDate: 
+  berthId: 
 }
 
 auth:bearer {
