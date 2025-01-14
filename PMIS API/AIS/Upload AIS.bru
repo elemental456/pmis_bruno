@@ -1,0 +1,23 @@
+meta {
+  name: Upload AIS
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{PMIS_URL}}/v1/upload/ais
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:form-urlencoded {
+  file: 
+}
+
+body:multipart-form {
+  file: @file(/Users/thitaporn/Downloads/ais_20250112001013.json)
+}
