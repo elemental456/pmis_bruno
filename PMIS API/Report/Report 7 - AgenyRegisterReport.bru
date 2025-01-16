@@ -1,17 +1,16 @@
 meta {
-  name: Report 6 - DocumentCountReport
+  name: Report 7 - AgenyRegisterReport
   type: http
-  seq: 1
+  seq: 2
 }
 
 get {
-  url: {{PMIS_URL}}/v1/reports/document-count?berthId=2&startDate=2024-12-10&endDate=2024-12-13&token={{PMIS_TOKEN}}
+  url: {{PMIS_URL}}/v1/reports/approved-agency?startDate=2024-12-10&endDate=2024-12-13&token={{PMIS_TOKEN}}
   body: none
   auth: bearer
 }
 
 params:query {
-  berthId: 2
   startDate: 2024-12-10
   endDate: 2024-12-13
   token: {{PMIS_TOKEN}}
