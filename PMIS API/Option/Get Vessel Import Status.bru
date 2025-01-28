@@ -1,0 +1,15 @@
+meta {
+  name: Get Vessel Import Status
+  type: http
+  seq: 32
+}
+
+get {
+  url: {{PMIS_URL}}/v1/options/vessel-import-status
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

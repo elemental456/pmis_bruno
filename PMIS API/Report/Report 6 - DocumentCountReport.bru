@@ -1,0 +1,22 @@
+meta {
+  name: Report 6 - DocumentCountReport
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/document-count?berthId=2&startDate=2024-12-10&endDate=2024-12-13&token={{PMIS_TOKEN}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  berthId: 2
+  startDate: 2024-12-10
+  endDate: 2024-12-13
+  token: {{PMIS_TOKEN}}
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

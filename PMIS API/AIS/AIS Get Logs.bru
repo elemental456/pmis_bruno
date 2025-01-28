@@ -1,0 +1,25 @@
+meta {
+  name: AIS Get Logs
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/ais/logs?arrivalBeginDate&arrivalEndDate&berthId
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  arrivalBeginDate: 
+  arrivalEndDate: 
+  berthId: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:form-urlencoded {
+  file: 
+}
