@@ -1,0 +1,25 @@
+meta {
+  name: Request Edit
+  type: http
+  seq: 18
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/documents/:docId/request-edit
+  body: json
+  auth: bearer
+}
+
+params:path {
+  docId: 26
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "rejectNote": "เรือเทส1"
+  }
+}
