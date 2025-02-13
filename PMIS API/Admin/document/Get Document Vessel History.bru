@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{PMIS_URL}}/v1/admin/documents/?page=1&limit=10
+  url: {{PMIS_URL}}/v1/admin/documents/vessel/:vesselId?page=1&limit=10
   body: json
   auth: bearer
 }
@@ -13,11 +13,12 @@ get {
 params:query {
   page: 1
   limit: 10
-  ~begin: 2024-12-26T00:00:00.000Z
-  ~end: 2024-12-28T00:00:00.000Z
-  ~search: X0019/2567
-  ~berthId: 15
-  ~status: Rejected
+  ~approvedDateBegin: 2024-12-28T00:00:00.000Z
+  ~approvedDateEnd: 2025-12-28T00:00:00.000Z
+}
+
+params:path {
+  vesselId: 68
 }
 
 auth:bearer {
