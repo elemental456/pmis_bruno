@@ -1,0 +1,29 @@
+meta {
+  name: Send Email Survey
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/survey/send/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "emails":[
+      "admin1@wisdomvast.com",
+      "admin2@wisdomvast.com",
+      "admin3@wisdomvast.com"
+    ]
+  }
+}

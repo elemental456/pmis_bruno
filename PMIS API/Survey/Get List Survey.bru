@@ -1,0 +1,22 @@
+meta {
+  name: Get List Survey
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/survey/list?beginDate&endDate&page&limit
+  body: none
+  auth: bearer
+}
+
+params:query {
+  beginDate: 
+  endDate: 
+  page: 
+  limit: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

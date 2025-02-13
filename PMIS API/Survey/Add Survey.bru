@@ -1,0 +1,100 @@
+meta {
+  name: Add Survey
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PMIS_URL}}/v1/admin/survey
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "name": "Customer Satisfaction Survey",
+    "description": "A survey to measure customer satisfaction levels.",
+    "publishSchedule": true,
+    "publishDate": "2025-02-20T10:00:00Z",
+    "endDate": "2025-03-20T10:00:00Z",
+    "sections": [
+      {
+        "title": "heading ทดสอบแบบสอบถาม",
+        "description": "heading คำอธิบาย ทดสอบแบบสอบถาม",
+        "typeSection": "heading"
+      },
+      {
+        "title": "evaluation ทดสอบแบบสอบถาม",
+        "description": "evaluation คำอธิบาย ทดสอบแบบสอบถาม",
+        "typeSection": "evaluation",
+        "satisfactionMin": 1,
+        "satisfactionDesMin": "Very Dissatisfied",
+        "satisfactionMax": 5,
+        "satisfactionDesMax": "Very Satisfied",
+        "isRequired": true,
+        "questions": [
+          {
+            "question": "คำถาม 1"
+          },
+          {
+            "question": "คำถาม 2"
+          },
+          {
+            "question": "คำถาม 3"
+          }
+        ]
+      },
+      {
+        "typeSection": "question",
+        "isRequired": true,
+        "questions": [
+          {
+            "question": "คำถาม 4 short_answer",
+            "typeQuestion": "short_answer"
+          }
+        ]
+      },
+      {
+        "typeSection": "question",
+        "isRequired": true,
+        "questions": [
+          {
+            "question": "คำถาม 5 paragraph",
+            "typeQuestion": "paragraph"
+          }
+        ]
+      },
+      {
+        "typeSection": "question",
+        "isRequired": true,
+        "questions": [
+          {
+            "question": "คำถาม 6 multiple_choice",
+            "typeQuestion": "multiple_choice",
+            "options": [
+              {
+                "optionName": "Very Dissatisfied"
+              },
+              {
+                "optionName": "Dissatisfied"
+              },
+              {
+                "optionName": "Neutral"
+              },
+              {
+                "optionName": "Satisfied"
+              },
+              {
+                "optionName": "Very Satisfied"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
