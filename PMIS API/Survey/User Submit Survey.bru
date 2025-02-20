@@ -1,0 +1,49 @@
+meta {
+  name: User Submit Survey
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{PMIS_URL}}/v1/survey
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "token": "33bd76b8f8e3f88b5199509c6c2373b9c96555bb4c2f0030b39d88092bd69d76",
+    "surveyId": 1,
+    "questions": [
+      {
+        "questionId": 1,
+        "ansPoint": 5
+      },
+      {
+        "questionId": 2,
+        "ansPoint": 3
+      },
+      {
+        "questionId": 3,
+        "ansPoint": 1
+      },
+      {
+        "questionId": 4,
+        "ansText": "ทดสอบตอบคำถาม"
+      },
+      {
+        "questionId": 5,
+        "ansText": "ทดสอบตอบคำถาม ทดสอบตอบคำถาม ทดสอบตอบคำถาม ทดสอบตอบคำถาม ทดสอบตอบคำถาม ทดสอบตอบคำถาม ทดสอบตอบคำถาม"
+      },
+      {
+        "questionId": 6,
+        "ansOptionId": 4
+      }
+    ]
+  }
+  
+}

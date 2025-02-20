@@ -1,0 +1,19 @@
+meta {
+  name: User Check Token Survey
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{PMIS_URL}}/v1/survey/:token
+  body: none
+  auth: bearer
+}
+
+params:path {
+  token: 33bd76b8f8e3f88b5199509c6c2373b9c96555bb4c2f0030b39d88092bd69d76
+}
+
+auth:bearer {
+  token: 
+}
