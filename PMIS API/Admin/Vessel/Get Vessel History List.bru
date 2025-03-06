@@ -1,0 +1,19 @@
+meta {
+  name: Get Vessel History List
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/vessels/:id/history
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
