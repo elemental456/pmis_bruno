@@ -1,0 +1,164 @@
+meta {
+  name: Update Survey
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PMIS_URL}}/v1/admin/survey/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
+
+body:json {
+  {
+    "id": 1,
+    "name": "Customer Satisfaction Survey",
+    "description": "A survey to measure customer satisfaction levels.",
+    "publishSchedule": true,
+    "publishDate": "2025-02-20T17:00:00+07:00",
+    "endDate": "2025-03-20T17:00:00+07:00",
+    "sections": [
+      {
+        "title": "บนสุด heading ทดสอบแบบสอบถาม",
+        "description": "บนสุด heading คำอธิบาย ทดสอบแบบสอบถาม",
+        "typeSection": "heading",
+        "typeSectionDes": "heading",
+        "isRequired": false,
+        "isDelete": false
+      },
+      {
+        "id": 1,
+        "title": "heading ทดสอบแบบสอบถาม",
+        "description": "heading คำอธิบาย ทดสอบแบบสอบถาม",
+        "typeSection": "heading",
+        "typeSectionDes": "heading",
+        "isRequired": false,
+        "isDelete": false
+      },
+      {
+        "id": 2,
+        "title": "evaluation ทดสอบแบบสอบถาม",
+        "description": "evaluation คำอธิบาย ทดสอบแบบสอบถาม",
+        "typeSection": "evaluation",
+        "typeSectionDes": "evaluation",
+        "satisfactionMin": 1,
+        "satisfactionDesMin": "Very Dissatisfied",
+        "satisfactionMax": 5,
+        "satisfactionDesMax": "Very Satisfied",
+        "isRequired": true,
+        "questions": [
+          {
+            "id": 1,
+            "question": "คำถาม 1",
+            "isDelete": false
+          },
+          {
+            "id": 2,
+            "question": "คำถาม 2",
+            "isDelete": false
+          },
+          {
+            "id": 3,
+            "question": "คำถาม 3",
+            "isDelete": false
+          }
+        ],
+        "isDelete": false
+      },
+      {
+        "id": 3,
+        "typeSection": "question",
+        "typeSectionDes": "question",
+        "isRequired": true,
+        "questions": [
+          {
+            "id": 4,
+            "question": "คำถาม 4 short_answer",
+            "typeQuestion": "short_answer",
+            "typeQuestionDes": "short_answer",
+            "isDelete": false
+          }
+        ],
+        "isDelete": false
+      },
+      {
+        "id": 4,
+        "typeSection": "question",
+        "typeSectionDes": "question",
+        "isRequired": true,
+        "questions": [
+          {
+            "id": 5,
+            "question": "คำถาม 5 paragraph",
+            "typeQuestion": "paragraph",
+            "typeQuestionDes": "paragraph",
+            "isDelete": false
+          }
+        ],
+        "isDelete": false
+      },
+      {
+        "id": 5,
+        "typeSection": "question",
+        "typeSectionDes": "question",
+        "isRequired": true,
+        "questions": [
+          {
+            "id": 6,
+            "question": "คำถาม 6 multiple_choice",
+            "typeQuestion": "multiple_choice",
+            "typeQuestionDes": "multiple_choice",
+            "options": [
+              {
+                "id": 1,
+                "optionName": "Very Dissatisfied",
+                "isDelete": false
+              },
+              {
+                "id": 2,
+                "optionName": "Dissatisfied",
+                "isDelete": false
+              },
+              {
+                "id": 3,
+                "optionName": "Neutral",
+                "isDelete": false
+              },
+              {
+                "id": 4,
+                "optionName": "Satisfied",
+                "isDelete": false
+              },
+              {
+                "id": 5,
+                "optionName": "Very Satisfied",
+                "isDelete": false
+              }
+            ],
+            "isDelete": false
+          }
+        ],
+        "isDelete": false
+      },
+      {
+        "id": 6,
+        "title": "บนสุด heading ทดสอบแบบสอบถาม",
+        "description": "บนสุด heading คำอธิบาย ทดสอบแบบสอบถาม",
+        "typeSection": "heading",
+        "typeSectionDes": "heading",
+        "isRequired": false,
+        "isDelete": true
+      }
+    ],
+    "isDelete": false
+  }
+}

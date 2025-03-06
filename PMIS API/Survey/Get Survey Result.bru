@@ -1,0 +1,19 @@
+meta {
+  name: Get Survey Result
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/survey/:id/result
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
