@@ -1,0 +1,21 @@
+meta {
+  name: Report 1 - SumSubmitLateRequestDoc ( Order )
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/sum-submit-late-order/pdf?startDate=2023-01-10&endDate=2025-12-13&token={{PMIS_TOKEN}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  startDate: 2023-01-10
+  endDate: 2025-12-13
+  token: {{PMIS_TOKEN}}
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

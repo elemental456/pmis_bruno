@@ -1,0 +1,22 @@
+meta {
+  name: Report 3 - UserDocumentCount
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/user-document-count/pdf?berthId=2&startDate=2024-01-10&endDate=2024-12-13&token={{PMIS_TOKEN}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  berthId: 2
+  startDate: 2024-01-10
+  endDate: 2024-12-13
+  token: {{PMIS_TOKEN}}
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

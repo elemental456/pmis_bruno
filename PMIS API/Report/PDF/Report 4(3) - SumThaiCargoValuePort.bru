@@ -1,0 +1,22 @@
+meta {
+  name: Report 4(3) - SumThaiCargoValuePort
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/sum-cargo-value-port-agency/pdf?berthId=2&startDate=2023-01-10&endDate=2025-12-13&token={{PMIS_TOKEN}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  berthId: 2
+  startDate: 2023-01-10
+  endDate: 2025-12-13
+  token: {{PMIS_TOKEN}}
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
