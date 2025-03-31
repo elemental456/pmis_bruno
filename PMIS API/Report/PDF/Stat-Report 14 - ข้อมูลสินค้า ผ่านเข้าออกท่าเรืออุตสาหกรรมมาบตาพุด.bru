@@ -1,0 +1,21 @@
+meta {
+  name: Stat-Report 14 - ข้อมูลสินค้า ผ่านเข้าออกท่าเรืออุตสาหกรรมมาบตาพุด
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/cargo-in-out-details/pdf?startDate=2024-12-10&endDate=2024-12-13&token={{PMIS_TOKEN}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  startDate: 2024-12-10
+  endDate: 2024-12-13
+  token: {{PMIS_TOKEN}}
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Stat-Report 11 - สถิติเปรียบเทียบจำนวนเรือจอดทิ้งสมอ รอเทียบท่าตามช่วงเวลา
+  type: http
+  seq: 22
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/anchorage-waiting-statistics/pdf?startDate=2024-12-10&endDate=2024-12-13&token={{PMIS_TOKEN}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  startDate: 2024-12-10
+  endDate: 2024-12-13
+  token: {{PMIS_TOKEN}}
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

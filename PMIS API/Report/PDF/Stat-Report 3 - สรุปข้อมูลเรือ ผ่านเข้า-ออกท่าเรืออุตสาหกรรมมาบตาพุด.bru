@@ -1,0 +1,21 @@
+meta {
+  name: Stat-Report 3 - สรุปข้อมูลเรือ ผ่านเข้า-ออกท่าเรืออุตสาหกรรมมาบตาพุด
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/vessel-summary-in-out/pdf?startDate=2024-12-10&endDate=2024-12-13&token={{PMIS_TOKEN}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  startDate: 2024-12-10
+  endDate: 2024-12-13
+  token: {{PMIS_TOKEN}}
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}

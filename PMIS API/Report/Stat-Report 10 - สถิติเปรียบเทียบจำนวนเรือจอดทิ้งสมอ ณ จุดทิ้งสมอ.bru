@@ -1,0 +1,21 @@
+meta {
+  name: Stat-Report 10 - สถิติเปรียบเทียบจำนวนเรือจอดทิ้งสมอ ณ จุดทิ้งสมอ
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{PMIS_URL}}/v1/reports/anchorage-statistics?startDate=2024-12-10&endDate=2024-12-13&token={{PMIS_TOKEN}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  startDate: 2024-12-10
+  endDate: 2024-12-13
+  token: {{PMIS_TOKEN}}
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
