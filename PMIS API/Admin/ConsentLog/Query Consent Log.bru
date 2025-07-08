@@ -1,0 +1,23 @@
+meta {
+  name: Query Consent Log
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{PMIS_URL}}/v1/admin/consent/log?page=1&limit=10&Begin=2024-12-26T00:00:00.000Z&End=2025-12-26T00:00:00.000Z&Email=nutthamon
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 10
+  Begin: 2024-12-26T00:00:00.000Z
+  End: 2025-12-26T00:00:00.000Z
+  Email: nutthamon
+}
+
+auth:bearer {
+  token: {{PMIS_TOKEN}}
+}
